@@ -16,15 +16,34 @@ def prompt_model(dataset, model_name = "deepseek-ai/deepseek-coder-6.7b-base", q
     print(f"Working with {model_name} quantization {quantization}...")
     
     # TODO: download the model
-    
+    model = AutoModelForCausalLM.from_pretrained(model_name)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+
+    print(f"Working with {model} tokenizer {tokenizer}...")
   
     if quantization:
         # TODO: load the model with quantization
-        
+        bnb_cfg = BitsAndBytesConfig(
+            load_in_4bit=True,
+            bnb_4bit_quant_type="nf4",
+            bnb_4bit_use_double_quant=True,
+            bnb_4bit_compute_dtype=torch.bfloat16,
+        )
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            device_map="auto",
+            quantization_config=bnb_cfg,
+        )
     else:
         # TODO: load the model without quantization
-        
+        model = AutoModelForCausalLM.from_pretrained(
+            model_name,
+            torch_dtype=torch.bfloat16,  # or torch.float16 if preferred
+            device_map="auto",
+        )
 
+    print(f"Working with {model} quantization {quantization}...")
+    
     results = []
     results_processed = []
     for case in dataset:
