@@ -16,13 +16,7 @@ def save_file(content, file_path):
 
 def prompt_model(dataset, model_name = "deepseek-ai/deepseek-coder-6.7b-base", quantization = True):
     print(f"Working with {model_name} quantization {quantization}...")
-    
-    # TODO: download the model
-    model = AutoModelForCausalLM.from_pretrained(model_name)
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
 
-    print(f"Working with {model} tokenizer {tokenizer}...")
-  
     if quantization:
         # TODO: load the model with quantization
         bnb_cfg = BitsAndBytesConfig(
@@ -45,6 +39,7 @@ def prompt_model(dataset, model_name = "deepseek-ai/deepseek-coder-6.7b-base", q
         )
 
     print(f"Working with {model} quantization {quantization}...")
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
 
     results = []
     results_processed = []
