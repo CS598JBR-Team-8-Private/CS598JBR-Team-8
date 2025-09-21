@@ -3,12 +3,12 @@
 ###################################################################
 
 # TODO: Update Your NetIDs in alphabetical order
-NetIDs = ["sampleID1", "sampleID2", "sampleID3", "sampleID4"]
+NetIDs = ["hl128", "ruijiex3", "sw107", "yan71"]
 NetIDs_str = " ".join(NetIDs)
 
 # TODO: Clone your GitHub repository
-! git clone [Your GitHub Link]
-%cd [Your GitHub Repo]
+! git clone https://github.com/CS598JBR-Team-8-Private/CS598JBR-Team-8.git
+%cd /CS598JBR-Team-8
 
 # Set up requirements for dataset generation
 ! bash -x MP1/setup_dataset.sh
@@ -16,7 +16,7 @@ NetIDs_str = " ".join(NetIDs)
 # dataset generation
 ! python3 MP1/dataset_generation.py {NetIDs_str} |& tee dataset_generation.log
 
-seed = "<your_seed>"
+seed = "79244547625250131920467003550834601672"
 # TODO: Replace the file path of selected_humaneval_[seed].jsonl generated in previous step
 input_dataset = "selected_humaneval_" + seed + ".jsonl"
 
