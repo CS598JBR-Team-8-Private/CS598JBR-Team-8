@@ -22,7 +22,6 @@ def get_first_function(code_string: str) -> str:
     lines = code_string.splitlines()
     function_lines = []
 
-    # Find the first 'def' line and its indentation
     start_index = -1
     initial_indent = -1
 
@@ -34,18 +33,13 @@ def get_first_function(code_string: str) -> str:
             break
 
     if start_index == -1:
-        return "" # No function found
+        return "" 
 
-    # Add the function definition line
     function_lines.append(lines[start_index])
 
-    # Capture the body of the function
     for i in range(start_index + 1, len(lines)):
         line = lines[i]
         trimmed_line = line.lstrip()
-
-        # Stop at the first line that is neither blank nor indented more
-        # than the function's starting line.
         if len(trimmed_line) > 0 and (len(line) - len(trimmed_line)) <= initial_indent:
             break
 
