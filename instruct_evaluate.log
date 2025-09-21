@@ -1,0 +1,27 @@
+Reading samples...
+0it [00:00, ?it/s]20it [00:00, 937.61it/s]
+Running test suites...
+  0%|          | 0/20 [00:00<?, ?it/s] 35%|███▌      | 7/20 [00:00<00:00, 68.00it/s] 70%|███████   | 14/20 [00:00<00:00, 51.90it/s]100%|██████████| 20/20 [00:00<00:00, 48.88it/s]100%|██████████| 20/20 [00:00<00:00, 50.87it/s]
+[(0, {'task_id': 'HumanEval/70', 'passed': False, 'result': "failed: expected '(' (<string>, line 81)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/27', 'passed': False, 'result': 'failed: unterminated string literal (detected at line 56) (<string>, line 56)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/121', 'passed': False, 'result': 'failed: invalid syntax (<string>, line 30)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/91', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 66)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/138', 'passed': False, 'result': 'failed: invalid syntax (<string>, line 66)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/113', 'passed': False, 'result': "failed: name '__name_' is not defined", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/32', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 114) (<string>, line 91)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/64', 'passed': False, 'result': 'failed: unterminated string literal (detected at line 71) (<string>, line 71)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/45', 'passed': False, 'result': "failed: expected ':' (<string>, line 67)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/35', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 77) (<string>, line 63)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/0', 'passed': False, 'result': "failed: No module named 'has_close_elements'", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/153', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 85) (<string>, line 67)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/145', 'passed': False, 'result': "failed: No module named 'order_by_points'", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/105', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/144', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 56)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/114', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 89) (<string>, line 66)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/75', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 57)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/157', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 49)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/150', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 49)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/111', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+Writing results to instruct_prompt_79244547625250131920467003550834601672.jsonl_results.jsonl...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:06,  3.11it/s]100%|██████████| 20/20 [00:00<00:00, 60.30it/s]
+{'pass@1': np.float64(0.1)}

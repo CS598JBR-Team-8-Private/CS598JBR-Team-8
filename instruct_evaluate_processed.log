@@ -1,0 +1,27 @@
+Reading samples...
+0it [00:00, ?it/s]20it [00:00, 1212.84it/s]
+Running test suites...
+  0%|          | 0/20 [00:00<?, ?it/s] 35%|███▌      | 7/20 [00:00<00:00, 68.76it/s] 70%|███████   | 14/20 [00:00<00:00, 67.91it/s]100%|██████████| 20/20 [00:00<00:00, 79.26it/s]
+[(0, {'task_id': 'HumanEval/27', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/70', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/91', 'passed': False, 'result': "failed: name 're' is not defined", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/121', 'passed': False, 'result': 'failed: ', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/138', 'passed': False, 'result': 'failed: ', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/32', 'passed': False, 'result': 'failed: must be real number, not NoneType', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/64', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/113', 'passed': False, 'result': "failed: name 'count' is not defined", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/45', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/0', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/153', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/35', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/145', 'passed': False, 'result': 'failed: ', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/144', 'passed': False, 'result': 'failed: test1', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/105', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/114', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/157', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/75', 'passed': False, 'result': 'failed: ', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/111', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/150', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+Writing results to instruct_prompt_processed_79244547625250131920467003550834601672.jsonl_results.jsonl...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:06,  3.04it/s]100%|██████████| 20/20 [00:00<00:00, 60.61it/s]
+{'pass@1': np.float64(0.6)}

@@ -1,0 +1,27 @@
+Reading samples...
+0it [00:00, ?it/s]20it [00:00, 3669.88it/s]
+Running test suites...
+  0%|          | 0/20 [00:00<?, ?it/s] 30%|███       | 6/20 [00:00<00:00, 54.09it/s] 75%|███████▌  | 15/20 [00:00<00:00, 73.36it/s]100%|██████████| 20/20 [00:00<00:00, 79.09it/s]
+[(0, {'task_id': 'HumanEval/121', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/70', 'passed': False, 'result': "failed: expected an indented block after 'while' statement on line 71 (<string>, line 73)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/27', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/91', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 75) (<string>, line 54)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/138', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 80) (<string>, line 66)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/113', 'passed': False, 'result': 'failed: Test 1', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/64', 'passed': False, 'result': 'failed: invalid syntax (<string>, line 76)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/32', 'passed': False, 'result': "failed: expected ':' (<string>, line 52)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/45', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 87) (<string>, line 75)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/0', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/35', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 71)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/153', 'passed': False, 'result': 'failed: ', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/145', 'passed': False, 'result': 'failed: ', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/105', 'passed': False, 'result': 'failed: unterminated triple-quoted string literal (detected at line 101) (<string>, line 78)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/144', 'passed': False, 'result': 'failed: invalid syntax (<string>, line 63)', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/114', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 39)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/157', 'passed': False, 'result': "failed: '(' was never closed (<string>, line 53)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/75', 'passed': False, 'result': "failed: expected '(' (<string>, line 77)", 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/150', 'passed': True, 'result': 'passed', 'completion_id': 0})]
+[(0, {'task_id': 'HumanEval/111', 'passed': False, 'result': 'failed: This prints if this assert fails 1 (good for debugging!)', 'completion_id': 0})]
+Writing results to base_prompt_79244547625250131920467003550834601672.jsonl_results.jsonl...
+  0%|          | 0/20 [00:00<?, ?it/s]  5%|▌         | 1/20 [00:00<00:05,  3.23it/s]100%|██████████| 20/20 [00:00<00:00, 64.31it/s]
+{'pass@1': np.float64(0.2)}
