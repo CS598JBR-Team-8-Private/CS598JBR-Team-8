@@ -1,12 +1,12 @@
-# CS598JBR-Team-0
+# CS598JBR-Team-8
 
 ## Group members
-- [Team member1], [NetID]
-- [Team member2], [NetID]
-- [Team member3], [NetID]
-- [Team member4], [NetID]
+- Chenxin Yan, yan71
+- Hsien-Hao Li, hl128
+- Ruijie Xu, ruijiex3
+- Shang-Ming Wu, sw107
 
 ## Link of Google Colab Notebook
-- MP1 - [link](URL) (please add the link here)
-- MP2 - [link](URL) (please add the link here)
-- MP3 - [link](URL) (please add the link here)
+- MP1 - [link](https://colab.research.google.com/drive/1GbaTPyNbXkUZcW8kFmuoX9E0gp6scRGG#scrollTo=zkGqEmtO7pJl)
+- MP2 - TBD
+- MP3 - TBD
