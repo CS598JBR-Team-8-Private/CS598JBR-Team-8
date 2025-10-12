@@ -4,13 +4,13 @@
 
 # TODO: Clone your GitHub repository
 ! git clone [Your GitHub Link]
-%cd [Your GitHub Repo]/MP2
+% cd [Your GitHub Repo]/MP2
 
 # TODO: Replace the file path of selected_humaneval_[seed].jsonl generated in MP1
 input_dataset = ""# selected_humaneval_[seed].jsonl
 
 # Set up requirements for model prompting
-! bash -x MP2/setup_models.sh
+! bash -x setup_models.sh
 
 # TODO: add your seed generated in MP1
 seed = "<your_seed>"
