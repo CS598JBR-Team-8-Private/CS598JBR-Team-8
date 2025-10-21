@@ -1,0 +1,486 @@
+2025-10-21 01:59:26.858959: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1761011966.880790    4355 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1761011966.887218    4355 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1761011966.906092    4355 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761011966.906113    4355 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761011966.906117    4355 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1761011966.906120    4355 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-10-21 01:59:26.911836: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+Working with deepseek-ai/deepseek-coder-6.7b-instruct (Vanilla prompt)...
+Fetching 2 files:   0%|          | 0/2 [00:00<?, ?it/s]Fetching 2 files:  50%|█████     | 1/2 [04:07<04:07, 247.36s/it]Fetching 2 files: 100%|██████████| 2/2 [04:07<00:00, 123.68s/it]
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:46<00:46, 46.45s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:02<00:00, 28.61s/it]Loading checkpoint shards: 100%|██████████| 2/2 [01:02<00:00, 31.29s/it]
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+
+============================================================
+[1/20] Processing: HumanEval/91
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_91 import is_bored
+
+import pytest
+def test_is_bored_empty_string():
+    assert is_bored("") == 0
+def test_is_bored_no_boredoms():
+    assert is_bored("Hello world") == 0
+def test_is_bored_one_boredom():
+    assert is_bored("The sky is blue. The sun is shining. I love this weather") == 1
+def test_is_bored_multiple_boredoms():
+    assert is_bored("I am bored. I want to play. I am hungry. I need a snack.") == 3
+def test_is_bored_boredom_at_end():
+    assert is_bored("I 
+Test file: HumanEval_91_test.py
+Pytest completed for HumanEval/91.
+Coverage: 100.00%
+
+============================================================
+[2/20] Processing: HumanEval/27
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_27 import flip_case
+
+import pytest
+def test_flip_case():
+    assert flip_case('Hello') == 'hELLO'
+    assert flip_case('hELLO') == 'Hello'
+    assert flipflip_case('') == ''
+    assert flip_case('aBcDeF') == 'AbCdEf'
+    assert flip_case('123456') == '123456'
+    assert flip_case('ALL UPPERCASE') == 'all lowercase'
+    assert flip_case('mixEd CaSe') == 'MiXeD cAsE'
+    assert flip_case('Flip_FlOp') == 'fLIp_fLoP'
+    assert flip_case('lower') == 'LOWER'
+    assert fl
+Test file: HumanEval_27_test.py
+Pytest completed for HumanEval/27.
+Coverage: 100.00%
+
+============================================================
+[3/20] Processing: HumanEval/70
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_70 import strange_sort_list
+
+import pytest
+def test_strange_sort_list():
+    assert strange_sort_list([1, 2, 3, 4]) == [1, 4, 2, 3]
+    assert strange_sort_list([5, 5, 5, 5]) == [5, 5, 5, 5]
+    assert strange_sort_list([]) == []
+    assert strange_sort_list([1]) == [1]
+    assert strange_sort_list([2, 1]) == [2, 1]
+    assert strange_sort_list([3, 2, 1]) == [3, 1, 2]
+    assert strange_sort_list([4, 3, 2, 1]) == [4, 1, 3, 2]
+    assert strange_sort_list([5, 4, 3, 2,
+Test file: HumanEval_70_test.py
+Pytest completed for HumanEval/70.
+Coverage: 100.00%
+
+============================================================
+[4/20] Processing: HumanEval/121
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_121 import solution
+
+import pytest
+def test_solution():
+    assert solution([5, 8, 7, 1]) == 12
+    assert solution([3, 3, 3, 3, 3]) == 9
+    assert solution([30, 13, 24, 321]) == 0
+    assert solution([1, 2, 3, 4, 5]) == 4
+    assert solution([2, 4, 6, 8, 10]) == 0
+    assert solution([100, 200, 300, 400, 500]) == 600
+    assert solution([1, 0, 1, 0, 1]) == 2
+    assert solution([0, 2, 4, 6, 8]) == 12
+    assert solution([10, 20, 30, 40, 50]) == 60
+Test file: HumanEval_121_test.py
+Pytest completed for HumanEval/121.
+Coverage: 100.00%
+
+============================================================
+[5/20] Processing: HumanEval/138
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_138 import is_equal_to_sum_even
+
+import pytest
+def is_equal_to_sum_even(n):
+    """Evaluate whether the given number n can be written as the sum of exactly 4 positive even numbers"""
+    return n%2 == 0 and n >= 8
+def test_is_equal_to_sum_even():
+    assert is_equal_to_sum_even(4) == False
+    assert is_equal_to_sum_even(6) == False
+    assert is_equal_to_sum_even(8) == True
+    assert is_equal_to_sum_even(10) == False
+    assert is_equal_to_sum_even(12) == True
+    
+Test file: HumanEval_138_test.py
+Pytest for HumanEval/138 exited with code 2.
+STDERR: 
+
+============================================================
+[6/20] Processing: HumanEval/113
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_113 import odd_count
+
+import pytest
+def test_odd_count_single_digit():
+    assert odd_count(['1']) == ["the number of odd elements 1n the str1ng 1 of the 1nput."]
+def test_odd_count_multiple_digits():
+    assert odd_count(['2468']) == ["the number of odd elements 4n the str4ng 4 of the 4nput."]
+def test_odd_count_mixed_digits():
+    assert odd_count(['1234567890']) == ["the number of odd elements 5n the str5ng 5 of the 5nput."]
+def test_odd_count_multiple_strings():
+
+Test file: HumanEval_113_test.py
+Pytest completed for HumanEval/113.
+Coverage: 100.00%
+
+============================================================
+[7/20] Processing: HumanEval/32
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_32 import find_zero
+
+import pytest
+def test_poly_with_single_term():
+    assert poly([3], 2) == 3
+def test_poly_with_two_terms():
+    assert poly([1, 2], 2) == 5
+def test_poly_with_three_terms():
+    assert poly([1, 2, 3], 2) == 11
+def test_find_zero_with_single_term():
+    with pytest.raises(IndexError):
+        find_zero([1])
+def test_find_zero_with_two_terms():
+    assert round(find_zero([1, 2]), 2) == -0.5
+def test_find_zero_with_three_terms():
+    assert round(f
+Test file: HumanEval_32_test.py
+Exception for HumanEval/32: Command '['/usr/bin/python3', '-m', 'pytest', 'HumanEval_32_test.py', '--cov=HumanEval_32', '--cov-report=json:MP2/Coverage/HumanEval_32_test_vanilla.json', '--junitxml', 'MP2/Reports/HumanEval_32_test_vanilla.xml', '-q', '-rA']' timed out after 30 seconds
+
+============================================================
+[8/20] Processing: HumanEval/64
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_64 import vowels_count
+
+import pytest
+def test_vowels_count_simple():
+    assert vowels_count("abcde") == 2
+    assert vowels_count("ACEDY") == 3
+def test_vowels_count_edge_cases():
+    assert vowels_count("") == 0
+    assert vowels_count("y") == 1
+    assert vowels_count("Y") == 1
+    assert vowels_count("yyy") == 3
+    assert vowels_count("bcdf") == 0
+def test_vowels_count_mixed_cases():
+    assert vowels_count("AbCdE") == 2
+    assert vowels_count("ACEDY") == 3
+  
+Test file: HumanEval_64_test.py
+Pytest completed for HumanEval/64.
+Coverage: 100.00%
+
+============================================================
+[9/20] Processing: HumanEval/45
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_45 import triangle_area
+
+import pytest
+def test_triangle_area():
+    assert triangle_area(5, 3) == 7.5
+    assert triangle_area(10, 1) == 5.0
+    assert triangle_area(2, 4) == 4.0
+    assert triangle_area(1, 1) == 0.5
+    assert triangle_area(0, 0) == 0
+Test file: HumanEval_45_test.py
+Pytest completed for HumanEval/45.
+Coverage: 100.00%
+
+============================================================
+[10/20] Processing: HumanEval/0
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_0 import has_close_elements
+
+import pytest
+def test_has_close_elements_empty():
+    assert not has_close_elements([], 0.5)
+def test_has_close_elements_no_close_elements():
+    assert not has_close_elements([1.0, 2.0, 3.0], 0.5)
+def test_has_close_elements_close_elements():
+    assert has_close_elements([1.0, 2.8, 3.0, 4.0, 5.0, 2.0], 0.3)
+def test_has_close_elements_close_elements_at_start():
+    assert has_close_elements([0.2, 1.0, 2.0, 3.0], 0.5)
+def test_has_close
+Test file: HumanEval_0_test.py
+Pytest completed for HumanEval/0.
+Coverage: 100.00%
+
+============================================================
+[11/20] Processing: HumanEval/35
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_35 import max_element
+
+import pytest
+def test_max_element_positive():
+    assert max_element([1, 2, 3]) == 3
+def test_max_element_negative():
+    assert max_element([5, 3, -5, 2, -3, 3, 9, 0, 123, 1, -10]) == 123
+def test_max_element_single_element():
+    assert max_element([5]) == 5
+def test_max_element_empty_list():
+    with pytest.raises(ValueError, match='The input list is empty'):
+        max_element([])
+Test file: HumanEval_35_test.py
+Pytest completed for HumanEval/35.
+Coverage: 100.00%
+
+============================================================
+[12/20] Processing: HumanEval/153
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_153 import Strongest_Extension
+
+import pytest
+def test_strongest_extension():
+    assert Strongest_Extension('my_class', ['AA', 'Be', 'CC']) == 'my_class.AA'
+    assert Strongest_Extension('Slices', ['SErviNGSliCes', 'Cheese', 'StuFfed']) == 'Slices.SErviNGSliCes'
+    assert Strongest_Extension('Slices', ['seRviNGSliCes', 'Cheese', 'StuFfed']) == 'Slices.seRviNGSliCes'
+    assert Strongest_Extension('Slices', ['SErviNGSliCes', 'cheese', 'StuFfed']) == 'Slices.SErviNGThe following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+The following generation flags are not valid and may be ignored: ['temperature']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+Setting `pad_token_id` to `eos_token_id`:32021 for open-end generation.
+
+Test file: HumanEval_153_test.py
+Pytest completed for HumanEval/153.
+Coverage: 80.00%
+
+============================================================
+[13/20] Processing: HumanEval/145
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_145 import order_by_points
+
+import pytest
+def test_order_by_points():
+    assert order_by_points([1, 11, -1, -11, -12]) == [-1, -11, 1, -12, 11]
+    assert order_by_points([]) == []
+    assert order_by_points([0]) == [0]
+    assert order_by_points([-1, 1]) == [-1, 1]
+    assert order_by_points([15, 5, -15, -5]) == [-15, 5, -5, 15]
+    assert order_by_points([12, 21, -12, -21]) == [-12, 12, -21, 21]
+Test file: HumanEval_145_test.py
+Pytest completed for HumanEval/145.
+Coverage: 100.00%
+
+============================================================
+[14/20] Processing: HumanEval/105
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_105 import by_length
+
+import pytest
+def test_by_length_positive():
+    assert by_length([2, 1, 1, 4, 5, 8, 2, 3]) == ["Eight", "Five", "Four", "Three", "Two", "Two", "One", "One"]
+    assert by_length([1, -1, 55]) == ["One"]
+def test_by_length_negative():
+    assert by_length([]) == []
+    assert by_length([10, 20, 30]) == []
+def test_by_length_edge():
+    assert by_length([9, 9, 9, 9, 9, 9, 9, 9]) == ["Nine", "Nine", "Nine", "Nine", "Nine", "Nine", "Nine", "Nine"]
+ 
+Test file: HumanEval_105_test.py
+Pytest completed for HumanEval/105.
+Coverage: 100.00%
+
+============================================================
+[15/20] Processing: HumanEval/144
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_144 import simplify
+
+import pytest
+def test_simplify_whole_number():
+    assert simplify("1/5", "5/1") == True
+def test_simplify_not_whole_number():
+    assert simplify("1/6", "2/1") == False
+def test_simplify_different_denominators():
+    assert simplify("7/10", "10/2") == False
+def test_simplify_zero_denominator():
+    with pytest.raises(ZeroDivisionError):
+        simplify("1/0", "1/1")
+def test_simplify_non_string_input():
+    with pytest.raises(TypeError):
+     
+Test file: HumanEval_144_test.py
+Pytest completed for HumanEval/144.
+Coverage: 100.00%
+
+============================================================
+[16/20] Processing: HumanEval/114
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_114 import minSubArraySum
+
+import pytest
+def test_minSubArraySum_positive_numbers():
+    assert minSubArraySum([2, 3, 4, 1, 2, 4]) == 1
+def test_minSubArraySum_negative_numbers():
+    assert minSubArraySum([-1, -2, -3]) == -6
+def test_minSubArraySum_mixed_numbers():
+    assert minSubArraySum([2, -3, 4, -1, 2, 4]) == 1
+def test_minSubArraySum_all_same_number():
+    assert minSubArraySum([2, 2, 2, 2]) == 2
+def test_minSubArraySum_empty_array():
+    assert minSubArraySu
+Test file: HumanEval_114_test.py
+Pytest completed for HumanEval/114.
+Coverage: 100.00%
+
+============================================================
+[17/20] Processing: HumanEval/157
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_157 import right_angle_triangle
+
+import pytest
+def test_right_angle_triangle():
+    assert right_angle_triangle(3, 4, 5) == True
+    assert right_angle_triangle(1, 2, 3) == False
+    assert right_angle_triangle(5, 12, 13) == True
+    assert right_angle_triangle(7, 24, 25) == True
+    assert right_angle_triangle(6, 8, 10) == True
+    assert right_angle_triangle(3, 4, 6) == False
+    assert right_angle_triangle(7, 24, 26) == False
+    assert right_angle_triangle(5, 12,
+Test file: HumanEval_157_test.py
+Pytest for HumanEval/157 exited with code 2.
+STDERR: 
+
+============================================================
+[18/20] Processing: HumanEval/75
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_75 import is_multiply_prime
+
+import pytest
+def test_is_multiply_prime():
+    assert is_multiply_prime(30) == True
+    assert is_multiply_prime(42) == True
+    assert is_multiply_prime(100) == False
+    assert is_multiply_prime(1) == False
+    assert is_multiply_prime(0) == False
+Test file: HumanEval_75_test.py
+Pytest completed for HumanEval/75.
+Coverage: 100.00%
+
+============================================================
+[19/20] Processing: HumanEval/150
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_150 import x_or_y
+
+import pytest
+def test_x_or_y_prime():
+    assert x_or_y(7, 34, 12) == 34
+def test_x_or_y_not_prime():
+    assert x_or_y(15, 8, 5) == 5
+def test_x_or_y_1():
+    assert x_or_y(1, 8, 5) == 5
+def test_x_or_y_0():
+    assert x_or_y(0, 8, 5) == 5
+Test file: HumanEval_150_test.py
+Pytest completed for HumanEval/150.
+Coverage: 100.00%
+
+============================================================
+[20/20] Processing: HumanEval/111
+
+--- Cleaned Code (first 500 chars) ---
+import pytest
+from HumanEval_111 import histogram
+
+import pytest
+def test_histogram_single_word():
+    assert histogram('a') == {'a': 1}
+    assert histogram('b') == {'b': 1}
+    assert histogram('c') == {'c': 1}
+def test_histogram_multiple_words_same_frequency():
+    assert histogram('a b c') == {'a': 1, 'b': 1, 'c': 1}
+    assert histogram('a a a') == {'a': 3}
+    assert histogram('b b b') == {'b': 3}
+    assert histogram('c c c') == {'c': 3}
+def test_histogram_multiple_words_different_frequen
+Test file: HumanEval_111_test.py
+Pytest completed for HumanEval/111.
+Coverage: 100.00%
+
+============================================================
+Final Statistics:
+Total Problems: 20
+Average Coverage: 84.00%
+Excellent (≥80%): 17 (85.0%)
+Good (50-79%): 0 (0.0%)
+Poor (<50%): 3 (15.0%)
+
+Results saved to: MP2/task_2_79244547625250131920467003550834601672_vanilla.jsonl
