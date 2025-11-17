@@ -1,0 +1,5 @@
+`trust_remote_code` is not supported anymore.
+Please check that the Hugging Face dataset 'bigcode/humanevalpack' isn't based on a loading script and remove `trust_remote_code`.
+If the dataset is based on a loading script, please ask the dataset author to remove it and convert it to a standard format like Parquet.
+Generating test split:   0%|          | 0/164 [00:00<?, ? examples/s]Generating test split: 100%|██████████| 164/164 [00:00<00:00, 4862.27 examples/s]
+Conversion completed. Output saved to selected_humanevalpack_79244547625250131920467003550834601672.jsonl

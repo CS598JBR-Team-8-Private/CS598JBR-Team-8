@@ -1,6 +1,7 @@
 import jsonlines
 import sys
 import torch
+import re
 from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig
 
 #####################################################
@@ -16,19 +17,72 @@ def prompt_model(dataset, model_name = "deepseek-ai/deepseek-coder-6.7b-instruct
     
     # TODO: download the model
     # TODO: load the model with quantization
-    
+    tok = AutoTokenizer.from_pretrained(model_name)
+    m = AutoModelForCausalLM.from_pretrained(
+        model_name,
+        load_in_4bit=True,
+        torch_dtype=torch.bfloat16,
+        device_map="auto"
+    )
     results = []
     for entry in dataset:
         # TODO: create prompt for the model
         # Tip : Use can use any data from the dataset to create 
         #       the prompt including prompt, canonical_solution, test, etc.
-        prompt = ""
-        
+        if vanilla:
+            prompt = '''
+You are an AI programming assistant. You are an AI programming assistant utilizing the DeepSeek Coder 
+model, developed by DeepSeek Company, and you only answer questions related to computer science. 
+For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer.
+
+### Instruction:           
+            
+'''
+            prompt += entry["declaration"] + entry["buggy_solution"]
+            prompt += '''
+Is the above code buggy or correct? Please explain your step by step reasoning. The prediction should 
+be enclosed within <start> and <end> tags. For example: <start>Buggy<end>
+
+### Response:
+'''
+        else:
+            prompt = '''
+You are an AI programming assistant. You are an AI programming assistant utilizing the DeepSeek Coder 
+model, developed by DeepSeek Company, and you only answer questions related to computer science. 
+For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will 
+refuse to answer.
+
+### Instruction:           
+            
+'''
+            prompt += entry["declaration"] + entry["buggy_solution"] + entry["test"]
+            prompt += '''
+Is the above code buggy or correct? Please explain your step by step reasoning. Please notice that here the code given consists
+of two parts, function and test, your goal is to judge whether the given function can pass the test successfully, if yes, then
+the code is correct, else the code is buggy.
+The prediction should  be enclosed within <start> and <end> tags. For example: <start>Buggy<end>
+'''
+            
+            prompt +='''
+### Response:
+'''
         # TODO: prompt the model and get the response
-        response = ""
+        input = tok(prompt, return_tensors="pt").to(m.device)
+        response = m.generate(**input, temperature=0, max_new_tokens=500)
+        response = tok.decode(response[0], skip_special_tokens=True)
 
         # TODO: process the response and save it to results
+        pattern = r"<start>(.*?)<end>"
+
+        # re.findall() returns a list of all substrings that matched the capturing group (.*?)
+        matches = re.findall(pattern, response, re.DOTALL)
         verdict = False
+        if len(matches) >= 3:
+            answer = matches[-1]
+        
+            if answer == "Buggy":
+                verdict = True
+        
 
         print(f"Task_ID {entry['task_id']}:\nprompt:\n{prompt}\nresponse:\n{response}\nis_expected:\n{verdict}")
         results.append({
